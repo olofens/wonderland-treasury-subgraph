@@ -1,6 +1,5 @@
-type ExampleEntity @entity {
+type ProtocolMetric @entity {
   id: ID!
-  count: BigInt!
-  owner: Bytes! # address
-  spender: Bytes! # address
+  timestamp: BigInt!
+  treasuryMIMMarketValue: BigDecimal!
 }
