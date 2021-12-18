@@ -2,23 +2,25 @@ specVersion: 0.0.2
 schema:
   file: ./schema.graphql
 dataSources:
-  - kind: ethereum/contract
-    name: WonderlandTimeStaking
+  - kind: ethereum
+    name: Memories
     network: avalanche
     source:
-      address: "0x4456B87Af11e87E329AB7d7C7A246ed1aC2168B9"
-      abi: WonderlandTimeStaking
-      startBlock: 3773964
+      address: "0x136Acd46C134E8269052c62A67042D6bDeDde3C9"
+      abi: Memories
+      startBlock: 3773923
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - WonderlandTimeStaking
+        - ProtocolMetric
       abis:
-        - name: WonderlandTimeStaking
-          file: ./abis/WonderlandTimeStaking.json
-      callHandlers:
-        - function: rebase()
-          handler: handleRebase
-      file: ./src/WonderlandTimeStaking.ts
+        - name: Memories
+          file: ./abis/Memories.json
+        - name: MIM
+          file: ./abis/MIM.json
+      eventHandlers:
+        - event: LogRebase(indexed uint256,uint256,uint256)
+          handler: handleLogRebase
+      file: ./src/Memories.ts
