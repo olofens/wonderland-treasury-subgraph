@@ -2,4 +2,5 @@ type ProtocolMetric @entity {
   id: ID!
   timestamp: BigInt!
   treasuryMIMMarketValue: BigDecimal!
+  treasuryWAVAXMarketValue: BigDecimal!
 }

@@ -9,6 +9,7 @@ export function loadOrCreateProtocolMetric(timestamp: BigInt): ProtocolMetric {
     protocolMetric = new ProtocolMetric(timestampStr);
     protocolMetric.timestamp = timestamp;
     protocolMetric.treasuryMIMMarketValue = BigDecimal.fromString("0");
+    protocolMetric.treasuryWAVAXMarketValue = BigDecimal.fromString("0");
 
     protocolMetric.save();
   }

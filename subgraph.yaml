@@ -20,6 +20,12 @@ dataSources:
           file: ./abis/Memories.json
         - name: MIM
           file: ./abis/MIM.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+        - name: WAVAX
+          file: ./abis/WAVAX.json
+        - name: JoePair
+          file: ./abis/JoePair.json
       eventHandlers:
         - event: LogRebase(indexed uint256,uint256,uint256)
           handler: handleLogRebase
