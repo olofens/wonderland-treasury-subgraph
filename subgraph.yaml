@@ -26,6 +26,8 @@ dataSources:
           file: ./abis/WAVAX.json
         - name: JoePair
           file: ./abis/JoePair.json
+        - name: WETH
+          file: ./abis/WETH.json
       eventHandlers:
         - event: LogRebase(indexed uint256,uint256,uint256)
           handler: handleLogRebase

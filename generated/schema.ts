@@ -22,6 +22,22 @@ export class ProtocolMetric extends Entity {
       "treasuryWAVAXMarketValue",
       Value.fromBigDecimal(BigDecimal.zero())
     );
+    this.set(
+      "treasuryWETHMarketValue",
+      Value.fromBigDecimal(BigDecimal.zero())
+    );
+    this.set(
+      "treasuryMIMFromWETHMIMJLP",
+      Value.fromBigDecimal(BigDecimal.zero())
+    );
+    this.set(
+      "treasuryMIMFromTIMEMIMJLP",
+      Value.fromBigDecimal(BigDecimal.zero())
+    );
+    this.set(
+      "treasuryWETHValueFromWETHTIMEJLP",
+      Value.fromBigDecimal(BigDecimal.zero())
+    );
   }
 
   save(): void {
@@ -75,5 +91,41 @@ export class ProtocolMetric extends Entity {
 
   set treasuryWAVAXMarketValue(value: BigDecimal) {
     this.set("treasuryWAVAXMarketValue", Value.fromBigDecimal(value));
+  }
+
+  get treasuryWETHMarketValue(): BigDecimal {
+    let value = this.get("treasuryWETHMarketValue");
+    return value!.toBigDecimal();
+  }
+
+  set treasuryWETHMarketValue(value: BigDecimal) {
+    this.set("treasuryWETHMarketValue", Value.fromBigDecimal(value));
+  }
+
+  get treasuryMIMFromWETHMIMJLP(): BigDecimal {
+    let value = this.get("treasuryMIMFromWETHMIMJLP");
+    return value!.toBigDecimal();
+  }
+
+  set treasuryMIMFromWETHMIMJLP(value: BigDecimal) {
+    this.set("treasuryMIMFromWETHMIMJLP", Value.fromBigDecimal(value));
+  }
+
+  get treasuryMIMFromTIMEMIMJLP(): BigDecimal {
+    let value = this.get("treasuryMIMFromTIMEMIMJLP");
+    return value!.toBigDecimal();
+  }
+
+  set treasuryMIMFromTIMEMIMJLP(value: BigDecimal) {
+    this.set("treasuryMIMFromTIMEMIMJLP", Value.fromBigDecimal(value));
+  }
+
+  get treasuryWETHValueFromWETHTIMEJLP(): BigDecimal {
+    let value = this.get("treasuryWETHValueFromWETHTIMEJLP");
+    return value!.toBigDecimal();
+  }
+
+  set treasuryWETHValueFromWETHTIMEJLP(value: BigDecimal) {
+    this.set("treasuryWETHValueFromWETHTIMEJLP", Value.fromBigDecimal(value));
   }
 }
