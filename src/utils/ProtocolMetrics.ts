@@ -11,9 +11,7 @@ export function loadOrCreateProtocolMetric(timestamp: BigInt): ProtocolMetric {
     protocolMetric.treasuryMIMMarketValue = BigDecimal.fromString("0");
     protocolMetric.treasuryWAVAXMarketValue = BigDecimal.fromString("0");
     protocolMetric.treasuryWETHMarketValue = BigDecimal.fromString("0");
-    protocolMetric.treasuryWETHValueFromWETHTIMEJLP = BigDecimal.fromString(
-      "0"
-    );
+    protocolMetric.treasuryWETHValueFromWETHMIMJLP = BigDecimal.fromString("0");
     protocolMetric.treasuryMIMFromTIMEMIMJLP = BigDecimal.fromString("0");
     protocolMetric.treasuryMIMFromWETHMIMJLP = BigDecimal.fromString("0");
 

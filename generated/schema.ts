@@ -35,7 +35,7 @@ export class ProtocolMetric extends Entity {
       Value.fromBigDecimal(BigDecimal.zero())
     );
     this.set(
-      "treasuryWETHValueFromWETHTIMEJLP",
+      "treasuryWETHValueFromWETHMIMJLP",
       Value.fromBigDecimal(BigDecimal.zero())
     );
   }
@@ -120,12 +120,12 @@ export class ProtocolMetric extends Entity {
     this.set("treasuryMIMFromTIMEMIMJLP", Value.fromBigDecimal(value));
   }
 
-  get treasuryWETHValueFromWETHTIMEJLP(): BigDecimal {
-    let value = this.get("treasuryWETHValueFromWETHTIMEJLP");
+  get treasuryWETHValueFromWETHMIMJLP(): BigDecimal {
+    let value = this.get("treasuryWETHValueFromWETHMIMJLP");
     return value!.toBigDecimal();
   }
 
-  set treasuryWETHValueFromWETHTIMEJLP(value: BigDecimal) {
-    this.set("treasuryWETHValueFromWETHTIMEJLP", Value.fromBigDecimal(value));
+  set treasuryWETHValueFromWETHMIMJLP(value: BigDecimal) {
+    this.set("treasuryWETHValueFromWETHMIMJLP", Value.fromBigDecimal(value));
   }
 }

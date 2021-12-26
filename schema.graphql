@@ -6,5 +6,5 @@ type ProtocolMetric @entity {
   treasuryWETHMarketValue: BigDecimal!
   treasuryMIMFromWETHMIMJLP: BigDecimal!
   treasuryMIMFromTIMEMIMJLP: BigDecimal!
-  treasuryWETHValueFromWETHTIMEJLP: BigDecimal!
+  treasuryWETHValueFromWETHMIMJLP: BigDecimal!
 }

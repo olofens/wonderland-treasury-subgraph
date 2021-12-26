@@ -16,7 +16,7 @@ export function handleLogRebase(event: LogRebase): void {
   protocolMetric.treasuryWETHMarketValue = getWETHValue();
   protocolMetric.treasuryMIMFromTIMEMIMJLP = getMIMValueFromMIMTIME();
   protocolMetric.treasuryMIMFromWETHMIMJLP = getMIMValueFromMIMWETH();
-  protocolMetric.treasuryWETHValueFromWETHTIMEJLP = getWETHValueFromMIMWETH();
+  protocolMetric.treasuryWETHValueFromWETHMIMJLP = getWETHValueFromMIMWETH();
 
   protocolMetric.save();
 }
