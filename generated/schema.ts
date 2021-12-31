@@ -38,6 +38,10 @@ export class ProtocolMetric extends Entity {
       "treasuryWETHValueFromWETHMIMJLP",
       Value.fromBigDecimal(BigDecimal.zero())
     );
+    this.set(
+      "treasuryWAVAXValueFromWAVAXTIMEJLP",
+      Value.fromBigDecimal(BigDecimal.zero())
+    );
   }
 
   save(): void {
@@ -127,5 +131,14 @@ export class ProtocolMetric extends Entity {
 
   set treasuryWETHValueFromWETHMIMJLP(value: BigDecimal) {
     this.set("treasuryWETHValueFromWETHMIMJLP", Value.fromBigDecimal(value));
+  }
+
+  get treasuryWAVAXValueFromWAVAXTIMEJLP(): BigDecimal {
+    let value = this.get("treasuryWAVAXValueFromWAVAXTIMEJLP");
+    return value!.toBigDecimal();
+  }
+
+  set treasuryWAVAXValueFromWAVAXTIMEJLP(value: BigDecimal) {
+    this.set("treasuryWAVAXValueFromWAVAXTIMEJLP", Value.fromBigDecimal(value));
   }
 }
