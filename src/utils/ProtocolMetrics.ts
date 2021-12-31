@@ -16,6 +16,9 @@ export function loadOrCreateProtocolMetric(date: string, timestamp: BigInt): Pro
     protocolMetric.treasuryWAVAXValueFromWAVAXTIMEJLP = BigDecimal.fromString("0");
 
     protocolMetric.save();
+  } else {
+    protocolMetric.timestamp = timestamp;
+    protocolMetric.save();
   }
 
   return protocolMetric;
