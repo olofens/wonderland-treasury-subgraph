@@ -7,6 +7,7 @@ import { getMIMValue } from "./utils/TreasuryValueGetters/MIM";
 import { getWETHValue } from "./utils/TreasuryValueGetters/WETH";
 import { getMIMValueFromMIMTIME } from "./utils/TreasuryValueGetters/JLPValueExtractors/MIMFromMIMTIME";
 import { getWETHValueFromMIMWETH } from "./utils/TreasuryValueGetters/JLPValueExtractors/WETHFromMIMWETH";
+import { getMIMValueFromWMEMOMIM } from "./utils/TreasuryValueGetters/SLPValueExtractors/MIMFromWMEMOMIM";
 
 export function handleLogRebase(event: LogRebase): void {
   let timestamp = event.block.timestamp;
@@ -20,6 +21,7 @@ export function handleLogRebase(event: LogRebase): void {
   protocolMetric.treasuryMIMFromWETHMIMJLP = getMIMValueFromMIMWETH();
   protocolMetric.treasuryWETHValueFromWETHMIMJLP = getWETHValueFromMIMWETH();
   protocolMetric.treasuryWAVAXValueFromWAVAXTIMEJLP = getWAVAXFromWAVAXTIME();
+  protocolMetric.treasuryMIMFromWMEMOMIMSLP = getMIMValueFromWMEMOMIM();
 
   protocolMetric.save();
 }

@@ -14,5 +14,8 @@ export const WETH_MIM_CONTRACT = "0x8ea6dd9482a49791e8c3d0f7c515bbd3be702f74";
 export const MIM_TIME_CONTRACT = "0x113f413371fc4cc4c9d6416cf1de9dfd7bf747df";
 export const WAVAX_TIME_CONTRACT = "0xf64e1c5b6e17031f5504481ac8145f4c3eab4917";
 
+// Sushiswap contracts
+export const WMEMO_MIM_CONTRACT = "0x4d308C46EA9f234ea515cC51F16fba776451cac8";
+
 // Others
 export const USDC_CONTRACT = "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664";

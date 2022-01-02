@@ -28,6 +28,8 @@ dataSources:
           file: ./abis/JoePair.json
         - name: WETH
           file: ./abis/WETH.json
+        - name: UniswapV2Pair
+          file: ./abis/UniswapV2Pair.json
       eventHandlers:
         - event: LogRebase(indexed uint256,uint256,uint256)
           handler: handleLogRebase
